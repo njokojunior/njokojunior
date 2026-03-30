@@ -41,16 +41,18 @@
 .browsing-container-view{
     border: 2px solid var(--black);
     border-radius: 10px;
-
+overflow: hidden;   
     height: 100%;
     position: relative;
 }
 
 .browsing-options{
-    position: absolute;
-    top: -4%;
-    left: 0;
-    background-color: black;
+  
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    background-color: var(--black);
+    
 }
 
 .library{
@@ -60,27 +62,8 @@
 
     display: flex;
     flex-direction: column;
-}
-
-.library .shelves{
-    flex-basis: calc(100%/3);
-}
-
-.library .shelves:not(:last-child){
-    border-bottom: 5px solid var(--black);
-
-}
-
-.shelve-1{
    
 }
 
-.shelve-2{
-   
-   
-}
 
-.shelve-3{
-  
-}
 
