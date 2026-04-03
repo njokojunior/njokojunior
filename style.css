@@ -1,69 +1,174 @@
-:root{
-    --black : #333; 
-    --white: #efefef;
-    
+:root {
+  --color-primary: #cc366e;
+  --black: #333;
+  --white: #efefef;
 
-    --space-xxl : 96pxpx;
-    --space-xl : 72px;
-    --space-lg : 64px;
-    --space-l : 52px;
-    --space-md : 32px;
-    --space-sm : 24px; 
-    --space-xm : 16px; 
+  --space-xxl: 96pxpx;
+  --space-xl: 72px;
+  --space-lg: 64px;
+  --space-l: 52px;
+  --space-md: 32px;
+  --space-sm: 24px;
+  --space-xm: 16px;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.main-view{
-    overflow: hidden;
-   
-    padding: var(--space-sm) var(--space-lg);
-    min-height: 100vh;
-    max-height: 100vh;
-    position: relative;
-    display: flex;
-    
+.main-view {
+  overflow: hidden;
+
+  padding: var(--space-sm) var(--space-lg);
+  min-height: 100vh;
+  max-height: 100vh;
+  position: relative;
+  display: flex;
 }
 
-.main-view>*{
-    flex-basis: 50%;
-    border: 2px solid var(--black);
+.main-view > * {
+  flex-basis: 50%;
+  border: 2px solid var(--black);
 }
 
-.browsing-container{
-    padding: var(--space-xl);
+.browsing-container {
+  padding: var(--space-xl);
 }
 
-.browsing-container-view{
-    border: 2px solid var(--black);
-    border-radius: 10px;
-overflow: hidden;   
-    height: 100%;
-    position: relative;
+.browsing-container-view {
+  border: 2px solid var(--black);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
 }
 
-.browsing-options{
+.browsing-options {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  background-color: var(--black);
+}
+
+.browsing-container-files {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.browsing-container-files > .row {
+  flex-basis: calc(100% / 4);
+  border-bottom: 2px solid red;
+}
+
+.owner-container {
+  /* background-color: var(--black); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.character {
+  position: relative;
+  width: 400px;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.character img {
+  width: 200px;
+}
+
+.eyes{
+  position: absolute;
+  /* background-color: rgba(252, 252, 252, 0.281); */
+  height: 15px;
+  width: 40px;
+  display: flex;
+  justify-content: space-between;
+  top: 16%;
   
-    width: 100%;
-    display: flex;
-    gap: 5px;
-    background-color: var(--black);
-    
 }
 
-.library{
-    position: relative;
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-   
+/* Eye containers */
+.eye {
+  /* position: absolute; */
+  border-radius: 8px;
+  width: 9px;
+  height: 14px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: inset 0 1px 1px 0px black;
 }
 
 
 
+/* Pupil */
+
+.pupil {
+  width: 9px;
+  height: 9px;
+  background: black;
+  border-radius: 50%;
+  /* position: absolute; */
+}
+/* .pupil {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.4), transparent);
+  border-radius: 50%;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* svg {
+  width: 320px;
+  transition: transform 0.1s;
+}
+
+.eye-white {
+  fill: white;
+  transform-origin: center;
+  animation: blink 5s infinite;
+}
+
+.iris {
+  fill: #3b82f6;
+}
+
+.pupil {
+  fill: black;
+}
+
+.highlight {
+  fill: white;
+  opacity: 0.9;
+}
+
+@keyframes blink {
+  0%,
+  92%,
+  100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+} */
