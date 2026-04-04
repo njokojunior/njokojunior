@@ -3,14 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>njokojunior👨‍💻</title>
-    <link rel="shortcut icon" href="./assets/fav-icon.png" type="image/x-icon">
+    <title>njokojunior</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/fav-icon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
-    <script src="./script.js" defer></script>
+    <script src="./animation.js" defer></script>
   </head>
   <body>
-    <div class="main-view">
-      <div class="browsing-container">
+    <div class="logo">
+      <img src="./assets/header-logo.png" alt="njokojunior logo" />
+    </div>
+    <main class="main-view">
+      <section class="browsing-container">
         <div class="browsing-container-view">
           <div class="browsing-options">
             <a href="#">Library</a>
@@ -18,35 +25,127 @@
           </div>
 
           <div class="browsing-container-files">
-            <div class="row projects">Projects</div>
+            <div class="row projects">
+              <div class="library-heading">
+                <img src="./assets/icons/open-folder.png" alt="js icon" />
+                Completed Projects
+              </div>
 
-            <div class="row certifications">certifications</div>
+              <div class="show tab-content">
+                <div class="folder">
+                  <img src="./assets/icons/folder.png" alt="folder icon" />
+                  <p>Grand Ouest</p>
+                </div>
 
-            <div class="row resources">Resources</div>
+                <div class="folder">
+                  <img src="./assets/icons/folder.png" alt="folder icon" />
+                  <p>Tabofins</p>
+                </div>
 
-            <div class="row education">Education</div>
+                <div class="folder">
+                  <img src="./assets/icons/folder.png" alt="folder icon" />
+                  <p>Legacy chain</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row certifications">
+              <div class="library-heading">
+                <img src="./assets/icons/open-folderg.png" alt="js icon" />
+                certifications
+              </div>
+
+              <div class="show tab-content">
+                <div class="folder">
+                  <img src="./assets/icons/folder.png" alt="folder icon" />
+                  <p>Web Dev</p>
+                </div>
+
+                <div class="folder">
+                  <img src="./assets/icons/folder.png" alt="folder icon" />
+                  <p>Cloud</p>
+                </div>
+
+                <div class="folder">
+                  <img src="./assets/icons/folder.png" alt="folder icon" />
+                  <p>DevOps</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row resources">
+              <div class="library-heading">
+                <img src="./assets/icons/open-foldergr.png" alt="js icon" />
+                Resources
+              </div>
+            </div>
+
+            <div class="row education">
+              <div class="library-heading">
+                <img src="./assets/icons/open-folderr.png" alt="js icon" />
+                Education
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="owner-container">
+      <section class="owner-container">
         <div class="character">
           <img src="./assets/njokojuniorf.png" alt="character" />
 
           <div class="eyes">
-             <!-- LEFT EYE -->
-             <div class="eye" id="eye-left">
-               <div class="pupil"></div>
-             </div>
-   
-             <!-- RIGHT EYE -->
-             <div class="eye" id="eye-right">
-               <div class="pupil"></div>
-             </div>
+            <!-- LEFT EYE -->
+            <div class="eye" id="eye-left">
+              <div class="pupil"></div>
+            </div>
 
-           </div>
+            <!-- RIGHT EYE -->
+            <div class="eye" id="eye-right">
+              <div class="pupil"></div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+
+        <div class="circular-shape">
+          <div class="technology t1">
+            <img src="./assets/icons/js.png" alt="js icon" />
+            Javascript
+          </div>
+          <div class="technology t2">
+            <img src="./assets/icons/atom.png" alt="reactjs icon" />
+            Reactjs
+          </div>
+          <div class="technology t3">
+            <img src="./assets/icons/node-js.png" alt="Nodejs icon" />
+            Nodejs
+          </div>
+          <div class="technology t4">
+            <img src="./assets/icons/database.png" alt="database icon" />
+            SQL
+          </div>
+          <div class="technology t5">
+            <img
+              src="./assets/icons/mongo-svgrepo-com.svg"
+              alt="mongodb icon"
+            />
+            NoSQL
+          </div>
+
+          <div class="technology t6">
+            <img src="./assets/icons/devops.png" alt="devops icon" />
+            DevOps
+          </div>
+          <div class="technology t7">
+            <img src="./assets/icons/wordpress.png" alt="WP icon" />
+            WP & CMS
+          </div>
+          <div class="technology t8">
+            <img src="./assets/icons/illustrator.png" alt="illustrator icon" />
+            Ai & Ps
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
