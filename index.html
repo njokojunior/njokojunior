@@ -10,7 +10,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="./animation.js" defer></script>
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <div class="logo">
@@ -24,27 +24,146 @@
             <a href="#">About</a>
           </div>
 
-          <div class="browsing-container-files">
-            <div class="row projects">
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span>
+                  <!-- <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M0 1H5L8 3H13V5H3.7457L2.03141 11H4.11144L5.2543 7H16L14 14H0V1Z" fill="#00acee"></path> </g></svg> -->
+                  <svg
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path d="M0 1H6L9 4H16V14H0V1Z" fill="#7dea02"></path>
+                    </g>
+                  </svg>
+                  My Work
+                </span>
+                <span class="icon">&darr;</span>
+              </div>
+              <div class="accordion-content">
+                <p>HTML is the structure of web pages.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span
+                  ><svg
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path d="M0 1H6L9 4H16V14H0V1Z" fill="#7dea02"></path>
+                    </g>
+                  </svg>
+                  Certifications
+                </span>
+                <span class="icon">&darr;</span>
+              </div>
+              <div class="accordion-content">
+                <p>CSS is used to style web pages.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span>
+                  <svg
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path d="M0 1H6L9 4H16V14H0V1Z" fill="#7dea02"></path>
+                    </g>
+                  </svg>
+                  Training Resources
+                </span>
+                <span class="icon">&darr;</span>
+              </div>
+              <div class="accordion-content">
+                <p>JavaScript adds interactivity to websites.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span>
+                  <svg
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path d="M0 1H6L9 4H16V14H0V1Z" fill="#7dea02"></path>
+                    </g>
+                  </svg>
+                  Services
+                </span>
+                <span class="icon">&darr;</span>
+              </div>
+              <div class="accordion-content">
+                <div class="folder">
+                  <img src="./assets/icons/word.png" alt="folder icon" />
+                  <p>Testimonials.nj</p>
+                </div>
+
+                <div class="folder">
+                  <img src="./assets/icons/word.png" alt="folder icon" />
+                  <p>Testimonials.nj</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="browsing-container-files">
+            <div class="row works">
               <div class="library-heading">
                 <img src="./assets/icons/open-folder.png" alt="js icon" />
-                Completed Projects
+                My Work
               </div>
 
               <div class="show tab-content">
                 <div class="folder">
                   <img src="./assets/icons/folder.png" alt="folder icon" />
-                  <p>Grand Ouest</p>
+                  <p>Web Projects</p>
                 </div>
 
                 <div class="folder">
                   <img src="./assets/icons/folder.png" alt="folder icon" />
-                  <p>Tabofins</p>
+                  <p>Graphics Projects</p>
                 </div>
 
                 <div class="folder">
                   <img src="./assets/icons/folder.png" alt="folder icon" />
-                  <p>Legacy chain</p>
+                  <p>Training Projects</p>
                 </div>
               </div>
             </div>
@@ -52,7 +171,7 @@
             <div class="row certifications">
               <div class="library-heading">
                 <img src="./assets/icons/open-folderg.png" alt="js icon" />
-                certifications
+                Certifications
               </div>
 
               <div class="show tab-content">
@@ -76,23 +195,55 @@
             <div class="row resources">
               <div class="library-heading">
                 <img src="./assets/icons/open-foldergr.png" alt="js icon" />
-                Resources
+                Training Resources
+              </div>
+              <div class="show tab-content">
+                <div class="folder">
+                  <img src="./assets/icons/folder.png" alt="folder icon" />
+                  <p>Fullstack</p>
+                </div>
+
+                <div class="folder">
+                  <img src="./assets/icons/folder.png" alt="folder icon" />
+                  <p>Graphic Design</p>
+                </div>
+
+                <div class="folder">
+                  <img src="./assets/icons/folder.png" alt="folder icon" />
+                  <p>DevOps</p>
+                </div>
               </div>
             </div>
 
             <div class="row education">
               <div class="library-heading">
                 <img src="./assets/icons/open-folderr.png" alt="js icon" />
-                Education
+                Services
+              </div>
+              <div class="show tab-content">
+                <div class="folder">
+                  <img src="./assets/icons/word.png" alt="folder icon" />
+                  <p>Web Dev.nj</p>
+                </div>
+
+                <div class="folder">
+                  <img src="./assets/icons/word.png" alt="folder icon" />
+                  <p>Graphic Design.nj</p>
+                </div>
+
+                <div class="folder">
+                  <img src="./assets/icons/word.png" alt="folder icon" />
+                  <p>Testimonials.nj</p>
+                </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
 
       <section class="owner-container">
         <div class="character">
-          <img src="./assets/njokojuniorf.png" alt="character" />
+          <img src="./assets/njokojuniorp.png" alt="character" />
 
           <div class="eyes">
             <!-- LEFT EYE -->
@@ -147,5 +298,20 @@
         </div>
       </section>
     </main>
+
+    <address class="address">
+      <a href="#" class="social-icon"
+        ><img src="./assets/icons/social-linkedin.png" alt="linkedIn"
+      /></a>
+      <a href="#" class="social-icon"
+        ><img src="./assets/icons/social-facebook.png" alt="facebook"
+      /></a>
+      <a href="#" class="social-icon"
+        ><img src="./assets/icons/social-email.png" alt="mail"
+      /></a>
+      <a href="#" class="social-icon"
+        ><img src="./assets/icons/social-customer-service.png" alt="call"
+      /></a>
+    </address>
   </body>
 </html>
