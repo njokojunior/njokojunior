@@ -44,26 +44,26 @@ function animateEyes() {
 }
 
 // accordion 
-  items.forEach(item => {
-    const header = item.querySelector(".accordion-header");
-    const icon = item.querySelector(".icon");
+  // items.forEach(item => {
+  //   const header = item.querySelector(".accordion-header");
+  //   const icon = item.querySelector(".icon");
 
-    header.addEventListener("click", () => {
-      const isActive = item.classList.contains("active");
+  //   header.addEventListener("click", () => {
+  //     const isActive = item.classList.contains("active");
 
-      // Close all
-      items.forEach(i => {
-        i.classList.remove("active");
-        i.querySelector(".icon").innerHTML = "&darr;";
-      });
+  //     // Close all
+  //     items.forEach(i => {
+  //       i.classList.remove("active");
+  //       i.querySelector(".icon").innerHTML = "&darr;";
+  //     });
 
-      // Open current if it was closed
-      if (!isActive) {
-        item.classList.add("active");
-        icon.innerHTML = "&uarr;";
-      }
-    });
-  });
+  //     // Open current if it was closed
+  //     if (!isActive) {
+  //       item.classList.add("active");
+  //       icon.innerHTML = "&uarr;";
+  //     }
+  //   });
+  // });
 
 //   Calling the eye animation effect
 animateEyes()
