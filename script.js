@@ -1,10 +1,85 @@
-const items = document.querySelectorAll(".accordion-item");
 const eyes = document.querySelectorAll(".eye");
+const links = document.querySelectorAll(".menu a");
+const sections = document.querySelectorAll(".page");
+
+let currentIndex = 0;
+let isScrolling = false;
+
+const container = document.querySelector(".main-view");
+
+function scrollToSection(index) {
+  isScrolling = true;
+
+  sections[index].scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+
+  setTimeout(() => {
+    isScrolling = false;
+  }, 800); // match your CSS animation duration
+}
+
+// WHEEL SCROLL
+window.addEventListener("wheel", (e) => {
+  if (isScrolling) return;
+
+  if (e.deltaY > 0) {
+    // scroll down
+    if (currentIndex < sections.length - 1) {
+      currentIndex++;
+      scrollToSection(currentIndex);
+    }
+  } else {
+    // scroll up
+    if (currentIndex > 0) {
+      currentIndex--;
+      scrollToSection(currentIndex);
+    }
+  }
+});
+
+const removeLinkHighlight = () => {
+  links.forEach((link) => link.classList.remove("active"));
+};
+
+links.forEach((link, index) => {
+  link.addEventListener("click", (e) => {
+    const target = link.getAttribute("href");
+    removeLinkHighlight()
+    if (target.startsWith("#")) {
+      e.preventDefault();
+      link.classList.add("active");
+      currentIndex = index + 1; // because #home is not in menu
+      scrollToSection(currentIndex);
+    }
+  });
+});
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      } else {
+        entry.target.classList.remove("active");
+      }
+    });
+  },
+  {
+    threshold: 0.6, // triggers when 60% visible
+  },
+);
+
+sections.forEach((section) => {
+  observer.observe(section);
+});
 
 // track mouse movement
 let mouseX = window.innerWidth / 2;
 let mouseY = window.innerHeight / 2;
 
+// mouse movement
 document.addEventListener("mousemove", (e) => {
   mouseX = e.clientX;
   mouseY = e.clientY;
@@ -43,27 +118,4 @@ function animateEyes() {
   requestAnimationFrame(animateEyes);
 }
 
-// accordion 
-  // items.forEach(item => {
-  //   const header = item.querySelector(".accordion-header");
-  //   const icon = item.querySelector(".icon");
-
-  //   header.addEventListener("click", () => {
-  //     const isActive = item.classList.contains("active");
-
-  //     // Close all
-  //     items.forEach(i => {
-  //       i.classList.remove("active");
-  //       i.querySelector(".icon").innerHTML = "&darr;";
-  //     });
-
-  //     // Open current if it was closed
-  //     if (!isActive) {
-  //       item.classList.add("active");
-  //       icon.innerHTML = "&uarr;";
-  //     }
-  //   });
-  // });
-
-//   Calling the eye animation effect
-animateEyes()
+animateEyes();

@@ -31,8 +31,8 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  /* background-image: radial-gradient(circle, #e6e6e6 2px, transparent 2px); */
-  /* background-size: 20px 20px; */
+  /* background-image: radial-gradient(circle, #e6e6e6 2px, transparent 2px);
+  background-size: 20px 20px; */
   background-color: #fbf8fb;
   color: var(--color-primary-dark);
 
@@ -84,7 +84,10 @@ a.btn-stroke:visited {
   align-items: center;
   width: 100%;
   padding: var(--space-xm) var(--space-xxl);
-  /* background-color: var(--color-primary-light); */
+
+}
+h2 .highlight{
+  color: var(--color-primary);
 }
 
 .logo img {
@@ -93,7 +96,14 @@ a.btn-stroke:visited {
 
 header nav.menu {
   display: flex;
+  align-items: center;
   gap: 30px;
+}
+
+
+header nav.menu a.active{
+  font-weight: 600;
+  color: var(--color-primary);
 }
 
 .socials {
@@ -103,6 +113,7 @@ header nav.menu {
   position: absolute;
   top: 50%;
   right: 0;
+  transform: translateY(-50%);
   background-color: var(--color-primary);
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
@@ -114,13 +125,35 @@ header nav.menu {
 }
 
 .main-view {
-  position: relative;
-  margin-top: calc(2 * var(--space-xxl));
+  height: 90vh;
+  overflow: hidden;
+
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  display: block;
+}
+
+.page {
+  height: 100vh;
+  scroll-snap-align: start;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   padding: 0 var(--space-xxl);
+  transition: all 0.7s ease;
+  opacity: 0;
+  transform: translateY(100px) scale(0.95);
+  filter: blur(5px);
 }
+
+.page.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+
 
 .description-container {
   display: flex;
@@ -130,30 +163,27 @@ header nav.menu {
   gap: 10px;
 }
 
-.description-container h1 {
+.description-container .primary-heading {
   font-size: var(--space-l);
 }
 
-.description-container h2 {
+.description-container h3 {
   font-weight: 500;
   font-size: var(--space-sm);
 }
 
-.description-container h2 span {
+/* .description-container h2 span {
   color: var(--color-primary);
-}
+} */
 
 .cta-container {
   display: flex;
   gap: 10px;
 }
 
-
-
 .cta-container a {
   margin-top: 20px;
 }
-
 
 a.btn-stroke:hover,
 a.btn-stroke:active {
@@ -304,4 +334,10 @@ section.owner-container {
   bottom: 30px;
   right: 20px;
   rotate: -40deg;
+}
+
+
+
+#about .owner-container img, #skills .owner-container img{
+  width: 70%;
 }
