@@ -1,293 +1,337 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>njokojunior</title>
-    <link
-      rel="shortcut icon"
-      href="./assets/icons/fav-icon.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script src="./script.js" defer></script>
-  </head>
-  <body>
-    <div class="socials">
-      <a href="#" class="social-icon"
-        ><img src="./assets/icons/social-linkedin.png" alt="linkedIn"
-      /></a>
-      <a href="#" class="social-icon"
-        ><img src="./assets/icons/social-facebook.png" alt="facebook"
-      /></a>
-      <a href="#" class="social-icon"
-        ><img src="./assets/icons/social-email.png" alt="mail"
-      /></a>
-      <a href="#" class="social-icon"
-        ><img src="./assets/icons/social-customer-service.png" alt="call"
-      /></a>
-    </div>
-    <header class="header" id="header">
-      <a class="logo" href="#home">
-        <img src="./assets/header-logo.png" alt="njokojunior logo" />
-      </a>
-      <nav class="menu">
-        <a href="#about">about</a>
-        <a href="#skills">skills</a>
-        <a href="#projects">projects</a>
-        <a href="#contact">contact</a>
-        <a href="#" class="btn-filled">Download CV</a>
-      </nav>
-    </header>
-    <main class="main">
-      <div class="main-view" id="mainView">
-        <section class="page" id="home">
-          <section class="description-container">
-            <div>
-              <h3>👋 Hey, I'm</h3>
-              <h1 class="primary-heading">NJOKO JUNIOR !</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>njokojunior</title>
+  <link rel="shortcut icon" href="./assets/icons/fav-icon.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- <div class="socials">
+    <a href="#" aria-label="LinkedIn"><img src="./assets/icons/social-linkedin.png" alt="linkedIn" /></a>
+    <a href="#" aria-label="Facebook"><img src="./assets/icons/social-facebook.png" alt="facebook" /></a>
+    <a href="#" aria-label="Email"><img src="./assets/icons/social-email.png" alt="mail" /></a>
+    <a href="#" aria-label="Call"><img src="./assets/icons/social-customer-service.png" alt="call" /></a>
+  </div> -->
+  <header class="header" id="header">
+    <a class="logo" href="#home">
+      <img src="./assets/header-logo.png" alt="njokojunior logo" />
+    </a>
+    <nav class="menu">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#contact">contact</a>
+      <a href="./assets/docs/CV JUNIOR NJOKO-1.pdf" class="btn-filled" download target="_blank">Download CV</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="main-view" id="mainView">
+      <section class="page" id="home">
+        <section class="description-container">
+          <div>
+            <h3>Available for work</h3>
+            <h1 class="primary-heading">NJOKO JUNIOR</h1>
+          </div>
+
+          <h2>
+            A Senior Full Stack <span class="highlight"> Web Developer</span>
+          </h2>
+          <p>
+            I build interactive websites and web applications using the
+            <span class="highlight2">latest technologies</span> . What sets me
+            apart is my ability to combine technical development with
+            creativity and strategy
+          </p>
+          <div class="cta-container">
+            <a href="#contact" class="btn-filled">Hire Me</a>
+            <a href="#projects" class="btn-stroke">See My Projects</a>
+          </div>
+        </section>
+        <section class="owner-container">
+          <div class="character">
+            <img src="./assets/njokojuniorp.png" alt="character" />
+
+            <div class="eyes">
+              <!-- LEFT EYE -->
+              <div class="eye" id="eye-left">
+                <div class="pupil"></div>
+              </div>
+
+              <!-- RIGHT EYE -->
+              <div class="eye" id="eye-right">
+                <div class="pupil"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="circular-shape">
+            <div class="technology t1">
+              <img src="./assets/icons/js.png" alt="js icon" />
+              Javascript
+            </div>
+            <div class="technology t2">
+              <img src="./assets/icons/atom.png" alt="reactjs icon" />
+              Reactjs
+            </div>
+            <div class="technology t3">
+              <img src="./assets/icons/node-js.png" alt="Nodejs icon" />
+              Nodejs
+            </div>
+            <div class="technology t4">
+              <img src="./assets/icons/database.png" alt="database icon" />
+              SQL
+            </div>
+            <div class="technology t5">
+              <img src="./assets/icons/mongo-svgrepo-com.svg" alt="mongodb icon" />
+              NoSQL
             </div>
 
-            <h2>
-              A Senior Full Stack <span class="highlight"> Web Developer</span>
+            <div class="technology t6">
+              <img src="./assets/icons/devops.png" alt="devops icon" />
+              DevOps
+            </div>
+            <div class="technology t7">
+              <img src="./assets/icons/wordpress.png" alt="WP icon" />
+              WP & CMS
+            </div>
+            <div class="technology t8">
+              <img src="./assets/icons/illustrator.png" alt="illustrator icon" />
+              Ai & Ps
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="page" id="about">
+        <section class="description-container">
+          <div>
+            <h3>Who am I ?</h3>
+            <h2 class="primary-heading">
+              About <span class="highlight">Me</span>
             </h2>
-            <p>
-              I build interactive websites and web applications using the
-              <span class="highlight2">latest technologies</span> . What sets me
-              apart is my ability to combine technical development with
-              creativity and strategy
-            </p>
-            <div class="cta-container">
-              <a href="#contact" class="btn-filled">Hire Me</a>
-              <a href="#projects" class="btn-stroke">See My Projects</a>
-            </div>
-          </section>
-          <section class="owner-container">
-            <div class="character">
-              <img src="./assets/njokojuniorp.png" alt="character" />
+          </div>
 
-              <div class="eyes">
-                <!-- LEFT EYE -->
-                <div class="eye" id="eye-left">
-                  <div class="pupil"></div>
-                </div>
+          <p>
+            I&apos;m a
+            <span class="highlight2"> 5+ years</span> Full-Stack Web
+            Developer, <span class="highlight2">Content Creator</span> , and
+            <span class="highlight2">Community Manager</span> passionate about
+            building impactful digital experiences.
+          </p>
 
-                <!-- RIGHT EYE -->
-                <div class="eye" id="eye-right">
-                  <div class="pupil"></div>
-                </div>
-              </div>
-            </div>
+          <p>
+            I specialize in creating <span class="highlight2">modern</span> ,
+            <span class="highlight2">responsive</span> web applications while
+            also helping brands connect with their audience through engaging
+            content.
+          </p>
 
-            <div class="circular-shape">
-              <div class="technology t1">
-                <img src="./assets/icons/js.png" alt="js icon" />
-                Javascript
-              </div>
-              <div class="technology t2">
-                <img src="./assets/icons/atom.png" alt="reactjs icon" />
-                Reactjs
-              </div>
-              <div class="technology t3">
-                <img src="./assets/icons/node-js.png" alt="Nodejs icon" />
-                Nodejs
-              </div>
-              <div class="technology t4">
-                <img src="./assets/icons/database.png" alt="database icon" />
-                SQL
-              </div>
-              <div class="technology t5">
-                <img
-                  src="./assets/icons/mongo-svgrepo-com.svg"
-                  alt="mongodb icon"
-                />
-                NoSQL
-              </div>
+          <p>
+            Currently, I&apos;m open to
+            <span class="highlight2">freelance opportunities</span> ,
+            <span class="highlight2">collaborations</span>, and
+            <span class="highlight2">full-time roles</span> where I can create
+            value through innovation and creativity.
+          </p>
 
-              <div class="technology t6">
-                <img src="./assets/icons/devops.png" alt="devops icon" />
-                DevOps
-              </div>
-              <div class="technology t7">
-                <img src="./assets/icons/wordpress.png" alt="WP icon" />
-                WP & CMS
-              </div>
-              <div class="technology t8">
-                <img
-                  src="./assets/icons/illustrator.png"
-                  alt="illustrator icon"
-                />
-                Ai & Ps
-              </div>
-            </div>
-          </section>
+          <div class="cta-container">
+            <a href="#projects" class="btn-stroke">The Journey &UpperRightArrow;</a>
+          </div>
+        </section>
+        <section class="owner-container">
+          <img src="./assets/about.png" alt="character" />
+        </section>
+      </section>
+
+      <section class="page" id="skills">
+        <section class="owner-container">
+          <img src="./assets/skills.png" alt="character" />
         </section>
 
-        <section class="page" id="about">
-          <section class="description-container">
-            <div>
-              <h3>😊 Who am I ?</h3>
-              <h2 class="primary-heading">
-                About <span class="highlight">Me</span>
-              </h2>
-            </div>
+        <section class="description-container">
+          <div>
+            <h3>Skills</h3>
+            <h2 class="primary-heading">
+              My <span class="highlight">Expertise</span>
+            </h2>
+          </div>
+          <p>
+            I specialize in building complete solutions by bridging the gap
+            between development, design, and strategy.
+          </p>
+          <ul>
+            <li>
+              <img src="./assets/icons/double-tick.svg" alt="tick" />Full-Stack Development
+            </li>
+            <li>
+              <img src="./assets/icons/double-tick.svg" alt="tick" />Responsive Web Design
+            </li>
+            <li>
+              <img src="./assets/icons/double-tick.svg" alt="tick" />REST API
+              Development
+            </li>
+            <li>
+              <img src="./assets/icons/double-tick.svg" alt="tick" />Performance Optimization
+            </li>
+            <li>
+              <img src="./assets/icons/double-tick.svg" alt="tick" />Visual
+              Identity Design
+            </li>
+            <li>
+              <img src="./assets/icons/double-tick.svg" alt="tick" />Community
+              Management
+            </li>
+          </ul>
 
-            <p>
-              I&apos;m a
-              <span class="highlight2"> 5+ years</span> Full-Stack Web
-              Developer, <span class="highlight2">Content Creator</span> , and
-              <span class="highlight2">Community Manager</span> passionate about
-              building impactful digital experiences.
-            </p>
-
-            <p>
-              I specialize in creating <span class="highlight2">modern</span> ,
-              <span class="highlight2">responsive</span> web applications while
-              also helping brands connect with their audience through engaging
-              content.
-            </p>
-
-            <p>
-              Currently, I&apos;m open to
-              <span class="highlight2">freelance opportunities</span> ,
-              <span class="highlight2">collaborations</span>, and
-              <span class="highlight2">full-time roles</span> where I can create
-              value through innovation and creativity.
-            </p>
-
-            <div class="cta-container">
-              <!-- <a href="#contact" class="btn-filled">Contact Me</a> -->
-              <a href="#projects" class="btn-stroke"
-                >The Journey &UpperRightArrow;</a
-              >
-            </div>
-          </section>
-          <section class="owner-container">
-            <img src="./assets/about.png" alt="character" />
-          </section>
+          <div class="cta-container">
+            <a href="#projects" class="btn-stroke">Tools & Technologies &UpperRightArrow;</a>
+          </div>
         </section>
+      </section>
 
-        <section class="page" id="skills">
-          <section class="owner-container">
-            <img src="./assets/skills.png" alt="character" />
-          </section>
+      <section class="page" id="projects">
+        <section class="description-container">
+          <div>
+            <h3>Projects</h3>
+            <h2 class="primary-heading">
+              Featured <span class="highlight">Projects</span>
+            </h2>
+          </div>
 
-          <section class="description-container">
-            <div>
-              <h3>💪 Skills</h3>
-              <h2 class="primary-heading">
-                My <span class="highlight">Expertise</span>
-              </h2>
-            </div>
-            <p>
-              I specialize in building complete solutions by bridging the gap
-              between development, design, and strategy.
-            </p>
-            <ul>
-              <li>
-                <img
-                  src="./assets/icons/double-tick.svg"
-                  alt="tick"
-                />Full-Stack Development
-              </li>
-              <li>
-                <img
-                  src="./assets/icons/double-tick.svg"
-                  alt="tick"
-                />Responsive Web Design
-              </li>
-              <li>
-                <img src="./assets/icons/double-tick.svg" alt="tick" />REST API
-                Development
-              </li>
-              <li>
-                <img
-                  src="./assets/icons/double-tick.svg"
-                  alt="tick"
-                />Performance Optimization
-              </li>
-              <li>
-                <img src="./assets/icons/double-tick.svg" alt="tick" />Visual
-                Identity Design
-              </li>
-              <li>
-                <img src="./assets/icons/double-tick.svg" alt="tick" />Community
-                Management
-              </li>
-            </ul>
+          <div class="projects-list">
+            <div class="project">
+              <div class="project-thumb">
+                <img src="./assets/femina237.avif" alt="Femina237">
+              </div>
+              <h3><a href="https://femina237.net" target="_blank" rel="noopener noreferrer">Femina 237</a></h3>
 
-            <div class="cta-container">
-              <!-- <a href="#contact" class="btn-filled">Contact Me</a> -->
-              <a href="#projects" class="btn-stroke"
-                >Tools & Technologies &UpperRightArrow;</a
-              >
-            </div>
-          </section>
-        </section>
-
-        <section class="page" id="projects">
-          <section class="description-container">
-            <div>
-              <h3>👨‍🏭 Projects</h3>
-              <h2 class="primary-heading">
-                Featured <span class="highlight">Projects</span>
-              </h2>
+               <div class="project-tags">
+                <span class="project-tag">Wordpress</span>
+                <span class="project-tag">Media Platform</span>
+              </div>
+              
+              <p class="project-short-des">
+                <span class="highlight2">Femina 237</span>
+                is a web platform that speaks out on everything happening in
+                the world that concerns the female gender more specifically.
+              </p>
             </div>
 
-            <div class="projects-list">
-              <div class="project">
-                <img src="" alt="project view">
-                <h3>Femina 237</h3>
-                <p class="project-short-des">
-                  <span class="highlight2">Femina 237</span>
-                  Is a web plateform and speaks out everything happening in the world that concerns the female gender more specifically
-                </p>
+            <div class="project">
+              <div class="project-thumb">
+                <img src="./assets/rockykombat.avif" alt="Rocky Combat">
+              </div>
+              <h3><a href="https://github.com/njokojunior/RockyKombat" target="_blank" rel="noopener noreferrer">Rocky
+                  Combat</a></h3>
+              <div class="project-tags">
+                <span class="project-tag">C# & Unity</span>
+                <span class="project-tag">Web3 / Crypto</span>
               </div>
 
-              <div class="project">
-                <img src="" alt="project view">
-                <h3>Rockycat Combat</h3>
-                <p class="project-short-des"> 
-                  In a cypto world full of greed and weakedness, the
-                  <span class="highlight2">Rockycat</span> comes as a symbol of hope and freedom for his people. 
-                </p>
-              </div>
-
-              <div class="project">
-                <img src="" alt="project view">
-                <h3>Grand Ouest</h3>
-                <p class="project-short-des"> 
-                  Have you ever tried shipping a product from France to Cameroon and you encounter much difficulties? 
-                  <span class="highlight2">Grand ouest fret service</span> comes as the immediate solution to your problem 
-                </p>
-              </div>
-
-              <!-- <div class="project">
-                <img src="" alt="project view">
-                <h3>Grand Ouest</h3>
-                <p class="project-short-des"> 
-                  Have you ever tried shipping a product from France to Cameroon and you encounter much difficulties? 
-                  <span class="highlight2">Grand ouest fret service</span> comes as the immediate solution to your problem 
-                </p>
-              </div>
-
-              <div class="project">
-                <img src="" alt="project view">
-                <h3>Grand Ouest</h3>
-                <p class="project-short-des"> 
-                  Have you ever tried shipping a product from France to Cameroon and you encounter much difficulties? 
-                  <span class="highlight2">Grand ouest fret service</span> comes as the immediate solution to your problem 
-                </p>
-              </div> -->
+              <p class="project-short-des">
+                In a crypto world full of greed and weakness, the
+                <span class="highlight2">Rockycat</span> comes as a symbol of
+                hope and freedom for his people.
+              </p>
             </div>
-          </section>
-          
-        </section>
 
-        <section class="page" id="contact">
-          <h1>Contact</h1>
+            <div class="project">
+              <div class="project-thumb">
+                <img src="./assets/grandouest.avif" alt="Grandouest Fret Service">
+              </div>
+              <h3><a href="https://grand-ouest.vercel.app/" target="_blank" rel="noopener noreferrer">Grand Ouest Fret
+                  Service</a></h3>
+
+              <div class="project-tags">
+                <span class="project-tag">HTML & CSS</span>
+                <span class="project-tag">Logistics</span>
+              </div>
+
+              <p class="project-short-des">
+                Have you ever tried shipping a product from France to
+                Cameroon and encountered difficulties?
+                <span class="highlight2">Grand Ouest Fret Service</span>
+                comes as the immediate solution to your problem.
+              </p>
+            </div>
+          </div>
         </section>
-      </div>
-    </main>
-  </body>
+      </section>
+
+      <section class="page" id="contact">
+        <div class="contact-card">
+          <h3>Let's build something</h3>
+          <h1>Got a project in mind?</h1>
+          <p>
+            I'm currently open to freelance work, collaborations, and
+            full-time roles. Tell me about what you're building and let's
+            figure out how I can help.
+          </p>
+          <div class="cta-container">
+            <a href="mailto:njokojunior1@gmail.com" class="btn-filled">Say Hello</a>
+            <a href="./assets/docs/CV JUNIOR NJOKO-1.pdf" class="btn-stroke" download target="_blank">Download CV</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="page site-footer" id="footer">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <h2>Njoko Junior</h2>
+            <p>
+              Senior Full-Stack Web Developer, content creator and community
+              manager, building modern digital experiences.
+            </p>
+            <div class="footer-socials">
+              <a href="https://www.linkedin.com/in/junior-njoko-a39ab836a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <img src="./assets/icons/social-linkedin.png" alt="linkedIn" />
+              </a>
+              <a href="https://www.facebook.com/junior.njoko.9" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img src="./assets/icons/social-facebook.png" alt="facebook" />
+              </a>
+              <a href="mailto:njokojunior1@gmail.com" aria-label="Email">
+                <img src="./assets/icons/social-email.png" alt="mail" />
+              </a>
+              <a href="tel:+237658538657" aria-label="Call">
+                <img src="./assets/icons/social-customer-service.png" alt="call" />
+              </a>
+            </div>
+          </div>
+
+          <nav class="footer-nav">
+            <div class="footer-col">
+              <h4>Navigate</h4>
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#skills">Skills</a>
+              <a href="#projects">Projects</a>
+              <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-col">
+              <h4>Focus</h4>
+              <a href="#skills">Full-Stack Development</a>
+              <a href="#skills">Responsive Design</a>
+              <a href="#skills">REST APIs</a>
+              <a href="#skills">Community Management</a>
+            </div>
+          </nav>
+        </div>
+
+        <div class="footer-bottom">
+          <span id="footerYear">© 2026 Njoko Junior. All rights reserved.</span>
+          <a href="#home" class="back-to-top">Back to top &uarr;</a>
+        </div>
+      </footer>
+    </div>
+  </main>
+</body>
+
 </html>

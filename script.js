@@ -1,11 +1,22 @@
 const eyes = document.querySelectorAll(".eye");
-const links = document.querySelectorAll(".menu a");
+const navLinks = document.querySelectorAll(".menu a[href^='#']");
 const sections = document.querySelectorAll(".page");
+const allJumpLinks = document.querySelectorAll("a[href^='#']");
+const scrollProgress = document.getElementById("scrollProgress");
+const footerYear = document.getElementById("footerYear");
+
+const sectionIndexById = (id) =>
+  Array.from(sections).findIndex((s) => s.id === id);
 
 let currentIndex = 0;
 let isScrolling = false;
 
-const container = document.querySelector(".main-view");
+// If the page loads on a specific hash (e.g. a direct link to #skills),
+// make sure currentIndex starts in sync so the next wheel scroll goes the
+// right direction instead of assuming we're still on #home.
+const initialHash = window.location.hash.replace("#", "");
+const initialIdx = Array.from(sections).findIndex((s) => s.id === initialHash);
+if (initialIdx !== -1) currentIndex = initialIdx;
 
 function scrollToSection(index) {
   isScrolling = true;
@@ -20,44 +31,62 @@ function scrollToSection(index) {
   }, 800); // match your CSS animation duration
 }
 
-// WHEEL SCROLL
+function updateProgress(index) {
+  if (!scrollProgress) return;
+  const pct = ((index + 1) / sections.length) * 100;
+  scrollProgress.style.width = `${pct}%`;
+}
+
+// WHEEL SCROLL (desktop paging between sections)
 window.addEventListener("wheel", (e) => {
   if (isScrolling) return;
+  if (window.innerWidth <= 900) return; // let mobile scroll natively
 
   if (e.deltaY > 0) {
     // scroll down
     if (currentIndex < sections.length - 1) {
       currentIndex++;
       scrollToSection(currentIndex);
+      updateProgress(currentIndex);
     }
+    // if already on the last section, let the native scroll continue to the footer
   } else {
     // scroll up
     if (currentIndex > 0) {
       currentIndex--;
       scrollToSection(currentIndex);
+      updateProgress(currentIndex);
     }
   }
 });
 
 const removeLinkHighlight = () => {
-  links.forEach((link) => link.classList.remove("active"));
+  navLinks.forEach((link) => link.classList.remove("active"));
 };
 
-links.forEach((link, index) => {
+allJumpLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     const target = link.getAttribute("href");
-    removeLinkHighlight()
-    if (target.startsWith("#")) {
-      e.preventDefault();
-      link.classList.add("active");
-      currentIndex = index + 1; // because #home is not in menu
-      scrollToSection(currentIndex);
-    }
+    if (!target || target === "#") return; // placeholder buttons (e.g. Download CV)
+
+    const targetId = target.slice(1);
+    const idx = sectionIndexById(targetId);
+    if (idx === -1) return;
+
+    e.preventDefault();
+    removeLinkHighlight();
+    const matchingNavLink = document.querySelector(`.menu a[href="#${targetId}"]`);
+    if (matchingNavLink) matchingNavLink.classList.add("active");
+
+    currentIndex = idx;
+    scrollToSection(currentIndex);
+    updateProgress(currentIndex);
   });
 });
 
 const observer = new IntersectionObserver(
   (entries) => {
+    // toggle the fade/reveal class independently for every section
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("active");
@@ -65,6 +94,30 @@ const observer = new IntersectionObserver(
         entry.target.classList.remove("active");
       }
     });
+
+    // Nav highlighting + progress bar are cosmetic only: sync them to
+    // whichever section is currently most visible. currentIndex itself is
+    // NOT touched here — it stays owned by the wheel/click handlers so the
+    // two never fight over which section is "current" mid-transition.
+    let mostVisible = null;
+    entries.forEach((entry) => {
+      if (
+        entry.isIntersecting &&
+        (!mostVisible || entry.intersectionRatio > mostVisible.intersectionRatio)
+      ) {
+        mostVisible = entry;
+      }
+    });
+
+    if (mostVisible) {
+      const id = mostVisible.target.getAttribute("id");
+      removeLinkHighlight();
+      const matchingLink = document.querySelector(`.menu a[href="#${id}"]`);
+      if (matchingLink) matchingLink.classList.add("active");
+
+      const idx = Array.from(sections).findIndex((s) => s.id === id);
+      if (idx !== -1) updateProgress(idx);
+    }
   },
   {
     threshold: 0.6, // triggers when 60% visible
@@ -119,3 +172,9 @@ function animateEyes() {
 }
 
 animateEyes();
+
+// footer year
+if (footerYear) {
+  const year = new Date().getFullYear();
+  footerYear.textContent = `© ${year} Njoko Junior. All rights reserved.`;
+}
