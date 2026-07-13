@@ -886,3 +886,59 @@ button:focus-visible {
 
   .footer-top { flex-direction: column; }
 }
+
+@media (max-width: 768px) {
+  #home {
+    text-align: center;
+  }
+
+  #home .description-container {
+    align-items: center;
+  }
+
+  .owner-container {
+    min-height: 340px;
+  }
+
+  .character {
+    width: 170px;
+  }
+
+  .character img {
+    width: 170px;
+  }
+
+  .circular-shape {
+    width: 240px;
+    height: 240px;
+  }
+
+  .circular-shape::after {
+    width: 150px;
+    height: 150px;
+  }
+
+  .technology {
+    font-size: .65rem;
+    padding: 4px 7px;
+  }
+}
+
+@media (max-width: 768px) {
+
+.footer-bottom{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:14px;
+}
+
+.footer-bottom span{
+    order:2;
+}
+
+.back-to-top{
+    order:1;
+}
+}
