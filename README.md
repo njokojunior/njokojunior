@@ -9,8 +9,6 @@ I enjoy mentoring developers, leading technical projects, and building tools tha
 
 ###
 
-<img align="right" height="150" src="me.png"  />
-
 ### TECH TOOLS
 
 <div align="left">
