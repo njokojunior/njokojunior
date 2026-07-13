@@ -427,7 +427,7 @@ section.owner-container {
 .eyes {
   position: absolute;
   height: 12px;
-  width: 40px;
+  width: 35px;
   display: flex;
   justify-content: space-between;
   top: 20%;
