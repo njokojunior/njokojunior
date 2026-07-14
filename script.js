@@ -4,6 +4,10 @@ const sections = document.querySelectorAll(".page");
 const allJumpLinks = document.querySelectorAll("a[href^='#']");
 const scrollProgress = document.getElementById("scrollProgress");
 const footerYear = document.getElementById("footerYear");
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("menu");
+
+
 
 const sectionIndexById = (id) =>
   Array.from(sections).findIndex((s) => s.id === id);
@@ -178,3 +182,17 @@ if (footerYear) {
   const year = new Date().getFullYear();
   footerYear.textContent = `© ${year} Njoko Junior. All rights reserved.`;
 }
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  menu.classList.toggle("active");
+  document.body.classList.toggle("menu-open");
+});
+
+document.querySelectorAll(".menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    menu.classList.remove("active");
+    document.body.classList.remove("menu-open");
+  });
+});
